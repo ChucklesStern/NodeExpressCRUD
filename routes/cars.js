@@ -27,5 +27,6 @@ var cars = [ {
 router.get("/",function(req,res){
 	res.send(cars);
 });
+module.exports = router;
 
 

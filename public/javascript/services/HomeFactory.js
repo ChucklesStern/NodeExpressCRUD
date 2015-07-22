@@ -7,7 +7,12 @@
 
 	function HomeFactory($http, $q) {
 		var o = {};
-		
+		o.getcallfunction = function () {
+			$http.get('/cars').success(function(res){
+				console.log(res);
+			});
+		};
+		o.getcallfunction();
 		return o;
 	}
 })();

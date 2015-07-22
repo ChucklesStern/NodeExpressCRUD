@@ -21,12 +21,27 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+//routes required here
+var cars = require("./routes/cars");
+
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
+//routes defined here
+app.use("/cars", cars);
+	
+
 var server = app.listen(port, function() {
 	var host = server.address().address;
 	console.log('Example app listening at http://localhost:' + port);
 });
+
+
+
+
+
+
+
+
