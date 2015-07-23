@@ -1,0 +1,28 @@
+<div ng-controller="createCarController as vm">
+	<br />
+	<form class="well container" ng-submit="vm.createCarFunction()"/>
+	<div class="form-group">
+		<label for="">Make</label>
+		<input class="form-control" placeholder="Make..." ng-model="vm.newCar.make">
+	</div>
+	<div class="form-group">
+		<label for="">Model</label>
+		<input class="form-control" placeholder="Model..." ng-model="vm.newCar.model">
+	</div>
+	<div class="form-group">
+		<label for="">Year</label>
+		<input class="form-control" placeholder="Color..." ng-model="vm.newCar.year">
+	</div>
+	<div class="form-group">
+		<label for="">Cupholders</label>
+		<input class="form-control" placeholder="Color..." ng-model="vm.newCar.cupholders">
+	</div>
+	<div class="form-group">
+		<label for="">Image</label>
+		<input class="form-control" placeholder="Color..." ng-model="vm.newCar.image">
+	</div>
+	<div class="center">
+		<button type="submit" class="btn btn-lg btn-info center">Submit</button>
+	</div>
+</form>
+</div>
