@@ -8,6 +8,12 @@
 	function HomeController(HomeFactory) {
 		var vm = this;
 		vm.title = 'Welcome to our App!';
-	}
+		vm.newCar = {};
+	//	vm.addNewCar = addNewCar;
+
+	vm.gimmiecars = HomeFactory.gimmiecars;
+
+
+}
 })();
 

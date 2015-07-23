@@ -22,16 +22,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //routes required here
-var cars = require("./routes/cars");
+var cars = require('./routes/cars');
+//route was changed from ./routes/createcars
+//var newCar = require('./routes/cars');
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
+//app.get('/createcars', function(req, res) {
+//	res.render('createcars');
+//});
 //routes defined here
-app.use("/cars", cars);
-	
+app.use('/', cars);
+//app.use('/', newCar);
+
 
 var server = app.listen(port, function() {
 	var host = server.address().address;

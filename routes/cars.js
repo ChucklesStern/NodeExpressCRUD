@@ -24,9 +24,25 @@ var cars = [ {
 }
 ];
 
-router.get("/",function(req,res){
+var newCar = {};
+
+router.get('/cars',function(req,res){
 	res.send(cars);
 });
+
+router.post('/cars',function(req,res){
+	anything = req.body.cars;
+	res.send(anything);
+	console.log(req.body.cars);
+	cars.push(req.body.cars);
+	
+
+
+});
+
+
+
+
 module.exports = router;
 
 

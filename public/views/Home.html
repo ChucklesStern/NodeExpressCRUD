@@ -1,3 +1,13 @@
 <div ng-controller="HomeController as vm">
-	<h1>{{vm.title}}</h1>
+	<div ng-repeat = "car in vm.gimmiecars">
+		<div class = "well container center">
+			<h1>the home is rendering</h1>
+			<h2>{{car.title}}</h2>
+			<h2>{{car.make}}</h2>
+			<h2>{{car.model}}</h2>
+			<h2>{{car.year}}</h2>
+			<h2>{{car.cupholders}}</h2>
+			<h2><img src={{car.image}}></h2>
+		</div>
+	</div>
 </div>
