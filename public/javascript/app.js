@@ -12,6 +12,10 @@
 			url: '/cars',
 			templateUrl: 'views/createcars.html'
 		});
-		$urlRouterProvider.otherwise('/');
-	}
+	//	$stateProvider.state('cars:id', {
+	//		url: '/cars:id',
+	//		templateUrl: 'views'
+		//})
+$urlRouterProvider.otherwise('/');
+}
 })();

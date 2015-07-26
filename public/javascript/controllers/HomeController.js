@@ -9,10 +9,11 @@
 		var vm = this;
 		vm.title = 'Welcome to our App!';
 		vm.newCar = {};
-	//	vm.addNewCar = addNewCar;
+	//	vm.car = car;
 
 	vm.gimmiecars = HomeFactory.gimmiecars;
 
+	vm.deleteCar = HomeFactory.deleteCarFunction;
 
 }
 })();
