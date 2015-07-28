@@ -8,6 +8,7 @@
 			<h2>{{car.year}}</h2>
 			<h2>{{car.cupholders}}</h2>
 			<h2><img src={{car.image}}></h2>
+			<button class = "btn btn-warning" ui-sref="EditCar({id: car.id})">Edit</button>
 			<button class = "btn btn-danger" ng-click="vm.deleteCar(car.id)"> Delete</button>
 		</div>
 	</div>

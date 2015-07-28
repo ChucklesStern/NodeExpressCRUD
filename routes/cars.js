@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var Car = require('../models/showroom');
 
 var cars = [ {
 	make: "elio",
@@ -38,6 +39,7 @@ router.get('/cars', function(req, res) {
 
 router.get('/:id',function(req,res){
 	var index = findCarIndex(req.params.id);
+
 	if (index === null) res.status(400).send();
 	else res.send(cars[index]);
 
@@ -59,7 +61,8 @@ router.put('/:id', function(req, res) {
 	var auto = req.body;
 	var index = findCarIndex(req.params.id);
 	if(index !== null) {
-		var newAuto = new Car(auto.make, auto.model, auto.year, auto.cupholders, auto.image, req.params.id);
+		var newAuto = new Car(auto.make, auto.model, auto.year, auto.cupholders, auto.image);
+		newAuto.id = index;
 		cars[index] = newAuto;
 		res.send("success");
 	}
